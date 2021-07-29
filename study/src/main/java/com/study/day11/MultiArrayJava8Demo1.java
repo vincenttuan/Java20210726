@@ -2,6 +2,7 @@ package com.study.day11;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
+import java.util.function.IntPredicate;
 
 public class MultiArrayJava8Demo1 {
 
@@ -20,9 +21,13 @@ public class MultiArrayJava8Demo1 {
 		
 		System.out.println("---------");
 		
-		// 過濾出(印出)及格的成績
+		// 過濾出(印出)及格或不及格的成績
+		IntPredicate high = score -> score >= 80;
+		IntPredicate pass = score -> score >= 60;
+		IntPredicate fail = score -> score < 60;
+		
 		Arrays.stream(scores)
-			  .filter(score -> score >= 60)
+			  .filter(pass)
 		      .forEach(System.out::println);
 		
 		System.out.println("---------");
