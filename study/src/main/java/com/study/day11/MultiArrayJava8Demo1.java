@@ -1,6 +1,7 @@
 package com.study.day11;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 
 public class MultiArrayJava8Demo1 {
 
@@ -24,7 +25,31 @@ public class MultiArrayJava8Demo1 {
 			  .filter(score -> score >= 60)
 		      .forEach(System.out::println);
 		
+		System.out.println("---------");
 		
+		// 計算總分
+		int sum = Arrays.stream(scores).sum();
+		// 計算平均
+		double avg = Arrays.stream(scores).average().getAsDouble();
+		System.out.printf("總分：%d 平均：%.1f\n", sum, avg);
+		
+		System.out.println("---------");
+		
+		// 敘述統計
+		IntSummaryStatistics stat = Arrays.stream(scores).summaryStatistics();
+		System.out.println(stat);
+		System.out.printf("總分：%d 平均：%.1f 最大：%d 最小：%d 個數：%d\n", 
+				          stat.getSum(),
+				          stat.getAverage(),
+				          stat.getMax(),
+				          stat.getMin(),
+				          stat.getCount());
 	}
 
 }
+
+
+
+
+
+
