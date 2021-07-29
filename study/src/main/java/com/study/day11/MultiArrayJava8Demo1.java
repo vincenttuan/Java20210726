@@ -25,7 +25,7 @@ public class MultiArrayJava8Demo1 {
 		// 資料排序
 		// sorted() 自然排序(小 -> 大)
 		// unordered() 無序
-		// boxed().sorted(Collections.reversrOrder()) 反序(大 -> 小)
+		// boxed().sorted(Collections.reverseOrder()) 反序(大 -> 小)
 		Arrays.stream(scores).sorted().forEach(System.out::println);
 		Arrays.stream(scores).unordered().forEach(System.out::println);
 		Arrays.stream(scores)
