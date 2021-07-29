@@ -15,7 +15,12 @@ public class MultiArrayDemo5 {
 				{e1, e2, e3}, {e4, e5, e6}
 		};
 		// 利用 for-in 把所有的成績逐一列出...
-		
+		for(Exam[] exam : exams) {
+			for(Exam e : exam) {
+				System.out.println(e.getName() + " = " + e.getScore());
+				System.out.println(e);
+			}
+		}
 	}
 
 }
