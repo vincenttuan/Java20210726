@@ -22,6 +22,8 @@ public class WrapperDemo5 {
 			.getAsDouble();
 		System.out.println(avgOfAge);
 		
+		// 試問公司平均薪資 = ?
+		
 	}
 
 }
