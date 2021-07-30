@@ -17,7 +17,7 @@ public class SetDemo3 {
 			System.out.printf("帳號資料( %d 筆): %s\n", acct.size(), acct);
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("請輸入(+帳號, -帳號, exit): ");
-			String data = scanner.next();
+			String data = scanner.nextLine();
 			if(data.equalsIgnoreCase("exit")) {
 				break;
 			}
@@ -26,6 +26,13 @@ public class SetDemo3 {
 					String addAcctName = data.substring(1);
 					if(acct.contains(addAcctName)) {
 						System.out.println("帳號已存在無法新增，請重新輸入");
+						continue;
+					}
+					// 去除左右二邊的空白
+					addAcctName = addAcctName.trim();
+					// 判斷字的中間是否空白
+					if(addAcctName.indexOf(" ") != -1) {
+						System.out.println("帳號中間不可有空白");
 						continue;
 					}
 					acct.add(addAcctName);
