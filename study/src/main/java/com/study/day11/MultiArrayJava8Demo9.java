@@ -1,5 +1,7 @@
 package com.study.day11;
 
+import java.util.Arrays;
+
 public class MultiArrayJava8Demo9 {
 	public static void main(String[] args) {
 		Exam e1 = new Exam("Java", 90);
@@ -10,7 +12,23 @@ public class MultiArrayJava8Demo9 {
 		
 		Exam[][] exams = { {e1, e2} , {e3, e4}, {e5} };
 		// 不分科目，求總分 = ?
+		// { {e1, e2}, {e3, e4}, {e5} }
+		// flatMap
+		// { e1, e2, e3, e4, e5 }
+		// mapToInt
+		// { 90, 80, 100, 40, 60 }
 		
+		Arrays.stream(exams)
+			.forEach(System.out::println);
 		
+		System.out.println();
+		
+		int sum = Arrays.stream(exams)
+				.flatMap(exam -> Arrays.stream(exam))
+				//.peek(System.out::println)
+				.mapToInt(exam -> exam.getScore())
+				.peek(System.out::println)
+				.sum();
+		System.out.println(sum);
 	}
 }
