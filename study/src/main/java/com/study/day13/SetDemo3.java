@@ -1,5 +1,6 @@
 package com.study.day13;
 
+import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
@@ -54,6 +55,12 @@ public class SetDemo3 {
 		}
 		
 		System.out.println("離開本系統...");
+		
+		// 轉靜態陣列進行分析
+		Object[] objs = acct.toArray();
+		System.out.println(objs);
+		System.out.println(Arrays.toString(objs));
+		
 	}
 
 }
