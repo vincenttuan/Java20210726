@@ -23,7 +23,15 @@ public class WrapperDemo5 {
 		System.out.println(avgOfAge);
 		
 		// 試問公司平均薪資 = ?
-		
+		double avgOfSalary = Arrays.stream(employees)
+			//.peek(System.out::println)
+			.filter(emp -> emp.getSalary() != null)
+			//.peek(System.out::println)
+			.mapToInt(emp -> emp.getSalary())
+			//.peek(System.out::println)
+			.average()
+			.getAsDouble();
+		System.out.println(avgOfSalary);
 	}
 
 }
