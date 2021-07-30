@@ -27,8 +27,19 @@ public class MultiArrayJava8Demo9 {
 				.flatMap(exam -> Arrays.stream(exam))
 				//.peek(System.out::println)
 				.mapToInt(exam -> exam.getScore())
-				.peek(System.out::println)
+				//.peek(System.out::println)
 				.sum();
 		System.out.println(sum);
+		
+		// Java科目的總分 = ?
+		int sum2 = Arrays.stream(exams)
+				.flatMap(exam -> Arrays.stream(exam))
+				//.peek(System.out::println)
+				.filter(exam -> exam.getName().equals("Java"))
+				//.peek(System.out::println)
+				.mapToInt(exam -> exam.getScore())
+				//.peek(System.out::println)
+				.sum();
+		System.out.println(sum2);
 	}
 }
