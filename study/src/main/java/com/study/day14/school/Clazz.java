@@ -1,4 +1,4 @@
-package com.study.day14;
+package com.study.day14.school;
 
 public class Clazz {
 	private String name; // 科目

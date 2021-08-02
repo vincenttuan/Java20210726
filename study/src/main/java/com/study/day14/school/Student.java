@@ -1,4 +1,4 @@
-package com.study.day14;
+package com.study.day14.school;
 
 public class Student {
 	private String name;
