@@ -11,7 +11,13 @@ public class Demo {
 		Student s3 = new Student("Helen", 19);
 		
 		s1.addClazz(c1).addClazz(c2).addClazz(c3);
+		s2.addClazz(c1).addClazz(c2);
+		s3.addClazz(c3);
+		
 		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		
 		
 	}
 }
