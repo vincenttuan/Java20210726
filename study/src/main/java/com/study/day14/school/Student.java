@@ -6,6 +6,15 @@ public class Student {
 	private String name;
 	private Integer age;
 	private LinkedHashSet<Clazz> clazzs = new LinkedHashSet<>();
+	
+	public Student() {
+	}
+	
+	public Student(String name, Integer age) {
+		this.name = name;
+		this.age = age;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -25,8 +34,9 @@ public class Student {
 		this.clazzs = clazzs;
 	}
 	
-	public void addClazz(Clazz clazz) {
+	public Student addClazz(Clazz clazz) {
 		clazzs.add(clazz);
+		return this;
 	}
 	@Override
 	public String toString() {
