@@ -33,5 +33,11 @@ public class Demo {
 		students.add(s3);
 		System.out.println(students);
 		
+		students.forEach(student -> {
+			//System.out.println(student.getClazzs());
+			int sum = student.getClazzs().stream().mapToInt(clazz -> clazz.getUnit() * clazz.getPrice()).sum();
+			System.out.printf("%s $%,d\n", student.getName(), sum);
+		});
+		
 	}
 }
