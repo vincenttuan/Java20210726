@@ -33,6 +33,11 @@ public class Clazz {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		return "Clazz [name=" + name + ", unit=" + unit + ", price=" + price + "]";
+	}
 	
 	
 	
