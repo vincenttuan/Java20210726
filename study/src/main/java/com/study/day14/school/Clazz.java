@@ -1,9 +1,9 @@
 package com.study.day14.school;
 
 public class Clazz {
-	private String name; // 科目
-	private Integer unit; // 學分
-	private Integer price; // 每學分價格
+	private String name; 
+	private Integer unit; 
+	private Integer price; 
 	
 	public Clazz() {
 		
