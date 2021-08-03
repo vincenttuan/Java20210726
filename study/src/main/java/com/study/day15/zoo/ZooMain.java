@@ -8,6 +8,13 @@ public class ZooMain {
 				tiger.getClass().getSimpleName(), 
 				tiger.getLegs());
 		tiger.move();
+		
+		Fish fish = new Fish();
+		System.out.printf("%s 有 %d 條腿\n", 
+				fish.getClass().getSimpleName(), 
+				fish.getLegs());
+		fish.move();
+		
 	}
 
 }
