@@ -24,6 +24,9 @@ public class ZooMain {
 		animal.move();
 		// 如果 animal 所指向的物件是 Bird 或 Ostrich 時
 		// 請呼叫特有方法 birth()
+		if(animal instanceof Bird) {
+			((Bird)animal).birth();
+		}
 		
 	}
 
