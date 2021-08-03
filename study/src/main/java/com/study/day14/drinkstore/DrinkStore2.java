@@ -30,7 +30,6 @@ public class DrinkStore2 {
 		// 5 杯拿鐵 3 杯奶茶 6 個金牌蛋塔 4 個天使蛋糕
 		// 打 8.8 折 (0.88)
 		// 建立 Combol 物件 familyCombo
-		// 請問此套餐折扣後的價格是多少 ?
 		latte.setAmount(5);
 		milkTea.setAmount(3);
 		goldTart.setAmount(6);
@@ -44,6 +43,8 @@ public class DrinkStore2 {
 		desserts.add(angelCake);
 		
 		Combo familyCombo = new Combo(drinks, desserts, 0.88);
+		
+		// 請問此套餐折扣後的價格是多少 ?
 		
 				
 	}
