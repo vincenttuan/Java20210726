@@ -5,12 +5,14 @@ class Father {
 		System.out.println("Father...");
 	}
 	Father(int x) {
+		this();
 		System.out.println("Father... " + x);
 	}
 }
 
 class Son extends Father {
 	Son() {
+		this(100);
 		System.out.println("Son...");
 	}
 	Son(int x) {
@@ -24,7 +26,7 @@ public class ConstrustorDemo1 {
 	
 	public static void main(String[] args) {
 		Son son1 = new Son();
-		Son son2 = new Son(100);
+		//Son son2 = new Son(100);
 		
 
 	}
