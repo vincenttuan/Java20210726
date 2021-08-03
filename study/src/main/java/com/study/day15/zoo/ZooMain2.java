@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ZooMain2 {
 	
-	// 多型下轉型的問題
+	// 多型下轉型的問題 I
 	public static void main(String[] args) {
 		Animal a1 = new Animal();
 		Animal a2 = new Tiger();
