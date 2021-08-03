@@ -7,7 +7,7 @@ public class ZooMain {
 		System.out.printf("%s 有 %d 條腿\n", 
 				tiger.getClass().getSimpleName(), 
 				tiger.getLegs());
-		
+		tiger.move();
 	}
 
 }
