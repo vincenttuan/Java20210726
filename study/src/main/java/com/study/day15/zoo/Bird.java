@@ -11,5 +11,8 @@ public class Bird extends Animal {
 		System.out.println("我會飛");
 	}
 	
+	void birth() {
+		System.out.println("我從蛋殼冒出來");
+	}
 	
 }
