@@ -15,6 +15,17 @@ public class ZooMain {
 				fish.getLegs());
 		fish.move();
 		
+		Bird bird = new Bird();
+		System.out.printf("%s 有 %d 條腿\n", 
+				bird.getClass().getSimpleName(), 
+				bird.getLegs());
+		bird.move();
+		
+		Ostrich ostrich = new Ostrich();
+		System.out.printf("%s 有 %d 條腿\n", 
+				ostrich.getClass().getSimpleName(), 
+				ostrich.getLegs());
+		ostrich.move();
 	}
 
 }
