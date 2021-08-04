@@ -7,8 +7,9 @@ public class DogStore {
 		Dog bigDog = new BigDog();
 		Dog smallDog = new SmallDog();
 		Dog eDog = new EDog();
+		Dog chihuahua = new Chihuahua();
 		
-		Dog[] dogs = {bigDog, smallDog, eDog};
+		Dog[] dogs = {bigDog, smallDog, eDog, chihuahua};
 		//Arrays.stream(dogs).forEach(dog -> printDog(dog));
 		Arrays.stream(dogs).forEach(DogStore::printDog);
 		
