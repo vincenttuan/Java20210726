@@ -2,6 +2,7 @@ package com.study.day23;
 
 import java.util.function.BiConsumer;
 import java.util.function.IntFunction;
+import java.util.function.ToIntFunction;
 
 public class LambdaDemo2 {
 
@@ -25,6 +26,36 @@ public class LambdaDemo2 {
 		System.out.println(sexName.apply(1));
 		System.out.println(sexName.apply(2));
 		
+		/*
+		 public interface Function<T,R> {
+			R apply(T t);
+		 }
+
+		 public interface IntFunction<R> {
+    		R apply(int value);
+		 }
+		 
+		 public interface ToIntFunction<T> {
+			int applyAsInt(T value);
+		 }
+		
+		*/
+		
+		ToIntFunction<String> nameLength = (String name) -> name.length();
+		System.out.println(nameLength.applyAsInt("Vincent"));
+		
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
