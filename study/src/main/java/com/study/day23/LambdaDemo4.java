@@ -15,6 +15,7 @@ public class LambdaDemo4 {
 				.mapToInt(p -> ((Integer)p).intValue()) // IntStream
 				//.peek(p -> System.out.println(p))
 				.sum();
+		
 		System.out.println(sum);
 	}
 
