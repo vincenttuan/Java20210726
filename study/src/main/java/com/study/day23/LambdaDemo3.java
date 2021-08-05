@@ -1,7 +1,6 @@
 package com.study.day23;
 
 import java.util.Arrays;
-import java.util.function.IntPredicate;
 
 public class LambdaDemo3 {
 
