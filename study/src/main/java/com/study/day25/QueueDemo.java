@@ -18,7 +18,7 @@ public class QueueDemo {
 			// 剩餘飲料
 			System.out.printf("喝: %s 剩下: %s\n", name, queue);
 		}
-		
 		System.out.printf("最後: %s\n", queue);
+		
 	}
 }
