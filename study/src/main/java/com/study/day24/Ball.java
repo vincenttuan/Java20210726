@@ -37,6 +37,12 @@ public class Ball { // data class
 		}
 		
 	}
+	
+
+	@Override
+	public int hashCode() {
+		return 7 * 11 * price + color.hashCode();
+	}
 
 	@Override
 	public String toString() {
