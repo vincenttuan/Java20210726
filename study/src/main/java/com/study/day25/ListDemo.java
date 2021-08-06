@@ -1,6 +1,7 @@
 package com.study.day25;
 
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
@@ -26,6 +27,19 @@ public class ListDemo {
 			.forEach(consumer1);
 		
 		System.out.println(nums);
+		// 雙向走訪器 ListIterator
+		ListIterator<Integer> iter = nums.listIterator();
+		while (iter.hasNext()) {
+			int idx = iter.nextIndex();
+			int value = iter.next();
+			System.out.printf("%d = %d\n",idx, value);
+		}
+		
+		while (iter.hasPrevious()) {
+			int idx = iter.previousIndex();
+			int value = iter.previous();
+			System.out.printf("%d = %d\n",idx, value);
+		}
 
 	}
 
