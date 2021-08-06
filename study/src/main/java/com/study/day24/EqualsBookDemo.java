@@ -18,7 +18,13 @@ public class EqualsBookDemo {
 		books.add(b4);
 		System.out.println(books);
 		System.out.println(books.size());
-
+		
+		// 求出總價格 = ?
+		int sum = books.stream()
+				//.mapToInt(b -> b.getPrice())
+				.mapToInt(Book::getPrice)
+				.sum();
+		System.out.println(sum);
 	}
 
 }
