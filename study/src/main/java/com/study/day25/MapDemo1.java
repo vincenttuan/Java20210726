@@ -23,5 +23,26 @@ public class MapDemo1 {
 		
 		// 個別取出元素資料
 		System.out.println(exams.get("數學"));
+		
+		// 個別列出資料
+		exams.entrySet()
+			.stream()
+			.forEach(entry -> System.out.println(entry.getKey() + ":" + entry.getValue()));
+		
+		// 透過 exams.entrySet() 來計算總分
+		int sum = exams.entrySet()
+			.stream()
+			.mapToInt(entry -> entry.getValue())
+			.sum();
+		System.out.println(sum);
+		
+		// 透過 exams.values() 來計算總分
+		sum = exams.values() // [100, 90, 100] Integer
+			.stream()
+			//.mapToInt(score -> score.intValue())
+			//.mapToInt(score -> score)
+			.mapToInt(Integer::intValue)
+			.sum();
+		System.out.println(sum);
 	}
 }
