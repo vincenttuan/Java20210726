@@ -18,9 +18,9 @@ public class TryCatchDemo4 {
 		if(file.exists()) {
 			try {
 				// 透過 useDelimiter("\n") 切分有幾筆資料
-				Scanner scanner = new Scanner(file).useDelimiter("\n");
+				Scanner scanner = new Scanner(file).useDelimiter("\n\r");
 				while(scanner.hasNext()) {
-					String row = scanner.next().trim();
+					String row = scanner.next();
 					System.out.println(row); // John,170,60,身高體重資料
 					//-----------------------------------------------------
 					// 再透過 useDelimiter(",") 切分有每一個欄位資料
