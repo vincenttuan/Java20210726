@@ -7,7 +7,8 @@ import java.util.function.Predicate;
 // 處理商業邏輯問題
 public class LoginService {
 	
-	public boolean loginCheck(String username, String password) throws FileNotFoundException {
+	public boolean loginCheck(String username, String password) 
+			throws FileNotFoundException, LoginException {
 		// 取得 List<User> users 的資料
 		// 判斷 username 與 password
 		UserDao dao = new UserDao();
@@ -17,6 +18,11 @@ public class LoginService {
 						.filter(check)
 						.findFirst()
 						.isPresent();
+		// 若 exist = false 則要拋出一個 LoginException 的例外物件
+		if(!exist) {
+			LoginException loginException = new LoginException("登入失敗 ...!");
+			throw loginException; // 拋出一個 LoginException 的例外物件
+		}
 		return exist;
 	}
 }

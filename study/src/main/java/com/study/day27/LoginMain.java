@@ -18,6 +18,10 @@ public class LoginMain {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("檔案找不到的錯誤");
+		} catch (LoginException e2) {
+			System.out.println(e2);
+			System.out.println(e2.getMessage());
+			e2.登入失敗怎麼辦();
 		}
 		System.out.println(check);
 	}

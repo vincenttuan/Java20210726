@@ -4,7 +4,6 @@ public class LoginException extends Exception {
 
 	public LoginException(String message) {
 		super(message);
-		
 	}
 	
 	// 自訂一個方法
