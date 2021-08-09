@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import org.w3c.dom.ls.LSOutput;
+enum MapKey {
+	name, h, w
+}
 
 public class TryCatchDemo5 {
 
@@ -27,11 +29,11 @@ public class TryCatchDemo5 {
 	public static void printBMI(String fileName) throws FileNotFoundException {
 		File file = new File(fileName);
 		Scanner scanner = new Scanner(file).useDelimiter("\r\n");
-		List<Map<String, Object>> list = getListMapData(scanner);
+		List<Map> list = getListMapData(scanner);
 		// 印出
 		list.forEach(m -> System.out.printf("%s bmi=%.2f\n",
-												m.get("name"),
-												getBMI(m.get("h"), m.get("w"))
+							m.get(MapKey.name),
+							getBMI(m.get(MapKey.h), m.get(MapKey.w))
 				));
 	}
 	
@@ -55,18 +57,18 @@ public class TryCatchDemo5 {
 		{"name": Bobo, "h": 180.0, "w": 70.0},
 	]
 	*/
-	private static List<Map<String, Object>> getListMapData(Scanner scanner) {
-		List<Map<String, Object>> list = new ArrayList<>();
+	private static List<Map> getListMapData(Scanner scanner) {
+		List<Map> list = new ArrayList();
 		while(scanner.hasNext()) {
 			String row = scanner.next();
 			Scanner scanner2 = new Scanner(row).useDelimiter(",");
 			String name = scanner2.next();
 			double h = scanner2.nextInt();
 			double w = scanner2.nextInt();
-			Map<String, Object> map = new LinkedHashMap<>();
-			map.put("name", name);
-			map.put("h", h);
-			map.put("w", w);
+			Map map = new LinkedHashMap();
+			map.put(MapKey.name, name);
+			map.put(MapKey.h, h);
+			map.put(MapKey.w, w);
 			list.add(map);
 		}
 		return list;
