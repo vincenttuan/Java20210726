@@ -11,7 +11,7 @@ public class LoginMain {
 		// 若輸入 loginCheck("Helen", "1111") 則得到 false
 		LoginService service = new LoginService();
 		String username = "John";
-		String password = "1234";
+		String password = "12342";
 		boolean check = false;
 		try {
 			check = service.loginCheck(username, password);
