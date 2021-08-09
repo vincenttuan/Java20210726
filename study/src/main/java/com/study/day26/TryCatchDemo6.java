@@ -30,6 +30,7 @@ public class TryCatchDemo6 {
 	}
 	
 	public static void setBmiValue(List<Person> people) {
+		// 設定/計算每一個 person 的 bmi 值
 		people.forEach(p -> p.setBmi(getBMI(p.getH(), p.getW())));
 	}
 	
