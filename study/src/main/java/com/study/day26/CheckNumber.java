@@ -22,7 +22,7 @@ public class CheckNumber {
 		System.out.println((0.1 + 0.1 + 0.1) == 0.3);
 		System.out.println(10 + 10 + 10 == 30);
 		
-		BigDecimal a = new BigDecimal("0.1");
+		BigDecimal a = new BigDecimal("0.1"); // 要放字串
 		BigDecimal b = new BigDecimal("0.1");
 		BigDecimal c = new BigDecimal("0.1");
 		BigDecimal d = a.add(b).add(c);
