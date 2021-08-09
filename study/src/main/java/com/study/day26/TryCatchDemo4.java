@@ -16,10 +16,9 @@ public class TryCatchDemo4 {
 	public static void printBMI(String fileName) {
 		File file = new File(fileName);
 		if(file.exists()) {
-			Scanner scanner = null;
 			try {
 				// 透過 useDelimiter("\n") 切分有幾筆資料
-				scanner = new Scanner(file).useDelimiter("\n");
+				Scanner scanner = new Scanner(file).useDelimiter("\n");
 				while(scanner.hasNext()) {
 					String row = scanner.next().trim();
 					System.out.println(row); // John,170,60,身高體重資料
