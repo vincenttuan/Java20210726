@@ -1,5 +1,7 @@
 package com.study.day27;
 
+import java.io.FileNotFoundException;
+
 public class LoginMain {
 
 	public static void main(String[] args) {
@@ -10,7 +12,13 @@ public class LoginMain {
 		LoginService service = new LoginService();
 		String username = "John";
 		String password = "1234";
-		boolean check = service.loginCheck(username, password);
+		boolean check = false;
+		try {
+			check = service.loginCheck(username, password);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			System.out.println("檔案找不到的錯誤");
+		}
 		System.out.println(check);
 	}
 	
