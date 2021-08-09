@@ -19,7 +19,7 @@ public class TryCatchDemo4 {
 			try {
 				// 透過 useDelimiter("\n\r") 切分有幾筆資料
 				// window 的斷行指令 \n\r
-				Scanner scanner = new Scanner(file).useDelimiter("\n\r");
+				Scanner scanner = new Scanner(file).useDelimiter("\r\n");
 				while(scanner.hasNext()) {
 					String row = scanner.next();
 					System.out.println(row); // John,170,60,身高體重資料
