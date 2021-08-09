@@ -18,10 +18,19 @@ public class TryCatchDemo4 {
 		if(file.exists()) {
 			Scanner scanner = null;
 			try {
+				// 透過 useDelimiter("\n") 切分有幾筆資料
 				scanner = new Scanner(file).useDelimiter("\n");
 				while(scanner.hasNext()) {
 					String row = scanner.next().trim();
-					System.out.println(row);
+					System.out.println(row); // John,170,60,身高體重資料
+					//-----------------------------------------------------
+					// 再透過 useDelimiter(",") 切分有每一個欄位資料
+					Scanner scanner2 = new Scanner(row).useDelimiter(",");
+					String name = scanner2.next();
+					double h = scanner2.nextInt();
+					double w = scanner2.nextInt();
+					double bmi = w / Math.pow(h/100, 2);
+					System.out.printf("%s bmi: %.2f\n", name,bmi);
 				}
 			} catch (FileNotFoundException e) {
 				// TODO: handle exception
