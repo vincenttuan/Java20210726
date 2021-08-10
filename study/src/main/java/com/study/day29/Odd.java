@@ -8,11 +8,14 @@ public class Odd extends Thread {
 		job();
 	}
 
-	public void job() {
+	private void job() {
 		// 取得執行緒的名字
 		String tName = Thread.currentThread().getName();
 		for(int i=1;i<1000;i+=2) {
 			System.out.printf("(%s) Odd = %d\n", tName, i);
+			if(i == 499) {
+				throw new RuntimeException("強迫停止");
+			}
 		}
 	}
 	
