@@ -1,8 +1,13 @@
 package com.study.day29;
 
 // 印出 1~1000 的奇數
-public class Odd {
+public class Odd extends Thread {
 	
+	@Override
+	public void run() {
+		job();
+	}
+
 	public void job() {
 		// 取得執行緒的名字
 		String tName = Thread.currentThread().getName();
