@@ -9,6 +9,12 @@ class Father extends Thread { // 爸爸
 		System.out.println("爸爸打電話請瓦斯工人送瓦斯");
 		Worker worker = new Worker();
 		worker.start();
+		// 暫停執行緒
+		try {
+			worker.join();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		System.out.println("爸爸開始洗澡");
 		System.out.println("爸爸洗完澡了");
 	}
