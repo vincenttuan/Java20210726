@@ -7,7 +7,8 @@ public class Car extends Thread {
 	
 	private CyclicBarrier cyclicBarrier; // 循環屏障
 	
-	public Car(CyclicBarrier cyclicBarrier) {
+	public Car(CyclicBarrier cyclicBarrier, String tName) {
+		super(tName);
 		this.cyclicBarrier = cyclicBarrier;
 	}
 	
