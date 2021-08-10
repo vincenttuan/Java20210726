@@ -2,6 +2,7 @@ package test;
 
 import com.study.day28.Rect;
 
+// 自行撰寫測試時需於執行時會手動加上 -ea 參數
 public class TestRect {
 	public static void main(String[] args) {
 		// 測試 Rect
