@@ -19,7 +19,7 @@ class Worker extends Thread { // 瓦斯工人
 	public void run() {
 		System.out.println("瓦斯工人準備送瓦斯");
 		for(int i=1;i<=5;i++) { // 模擬送瓦斯的時間
-			System.out.printf("%d 秒鐘 ", i);
+			System.out.printf("%d 秒鐘\n", i);
 			try {
 				Thread.sleep(1000); // 1000ms - 1s
 			} catch (Exception e) {
