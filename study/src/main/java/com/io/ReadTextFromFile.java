@@ -11,8 +11,10 @@ public class ReadTextFromFile {
 			
 			int value = 0;
 			while((value = fr.read()) != -1) {
-				System.out.println(value);
-				System.out.println((char)value);
+				//System.out.println(value);
+				//System.out.println((char)value);
+				char c = (char)value;
+				System.out.print(c);
 			}
 			
 			
