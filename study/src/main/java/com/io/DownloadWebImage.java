@@ -9,7 +9,7 @@ import java.net.URL;
 public class DownloadWebImage {
 
 	public static void main(String[] args) throws MalformedURLException {
-		String fromPath = "https://img.ltn.com.tw/Upload/business/page/800/2020/05/26/240.jpg";
+		String fromPath = "https://image.u-car.com.tw/4238/photo_97922.jpg";
 		String toPath = "src/main/java/com/io/data/apple_car.jpg";
 		
 		URL url = new URL(fromPath);
@@ -24,7 +24,7 @@ public class DownloadWebImage {
 			System.out.println("寫檔完成");
 			
 		} catch(IOException e) {
-			
+			e.printStackTrace();
 		}
 
 	}
