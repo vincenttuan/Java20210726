@@ -27,7 +27,9 @@ public class FilesReadDemo {
 		list.forEach(System.out::println);
 		System.out.println();
 		
-		
+		// 3. Files.lines (得到 java 8 的 Stream 串流)
+		System.out.println("-- 3. Files.lines --");
+		Files.lines(path).forEach(System.out::println);
 		
 	}
 
