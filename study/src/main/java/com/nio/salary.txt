@@ -1,0 +1,5 @@
+john 45000
+Mary 45000
+Bobo 38000
+Jean 56000
+Anna 75000
