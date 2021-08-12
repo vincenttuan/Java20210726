@@ -1,6 +1,9 @@
 package com.nio;
 
+import java.io.InputStream;
 import java.net.URL;
+
+import org.apache.commons.io.IOUtils;
 
 public class OpenWeather {
 	private static final String KEY = "ab99f5242005a98291f643ea873b363d";
@@ -10,7 +13,9 @@ public class OpenWeather {
 	public static void main(String[] args) throws Exception {
 		String w_path = String.format(WEATHER_PATH, "taoyuan", "tw", KEY);
 		URL url = new URL(w_path);
-		url.openStream()
+		InputStream inputStream = url.openStream();
+		String jsonString = IOUtils.toString(inputStream, "UTF-8");
+		System.out.println(jsonString);
 	}
 
 }
