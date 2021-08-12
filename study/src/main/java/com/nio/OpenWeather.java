@@ -14,6 +14,7 @@ public class OpenWeather {
 		String w_path = String.format(WEATHER_PATH, "taoyuan", "tw", KEY);
 		URL url = new URL(w_path);
 		InputStream inputStream = url.openStream();
+		// 將 InputStream 轉 String
 		String jsonString = IOUtils.toString(inputStream, "UTF-8");
 		System.out.println(jsonString);
 	}
